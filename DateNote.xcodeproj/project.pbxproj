@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1044D6761B53FEDB0074BAE1 /* DaliyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1044D6751B53FEDB0074BAE1 /* DaliyViewController.m */; };
 		1044D6791B53FF520074BAE1 /* DaliyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1044D6781B53FF520074BAE1 /* DaliyCell.m */; };
+		10F278051B5BFAFB007EC733 /* TemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F278041B5BFAFB007EC733 /* TemplateViewController.m */; };
+		10F278081B5BFC3D007EC733 /* TemplateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F278071B5BFC3D007EC733 /* TemplateCell.m */; };
+		10F2780B1B5C07DF007EC733 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F2780A1B5C07DF007EC733 /* CustomViewController.m */; };
 		269E57901B53B085009895D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 269E578F1B53B085009895D8 /* main.m */; };
 		269E57931B53B085009895D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 269E57921B53B085009895D8 /* AppDelegate.m */; };
 		269E57961B53B085009895D8 /* DateNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 269E57941B53B085009895D8 /* DateNote.xcdatamodeld */; };
@@ -26,12 +29,7 @@
 		269E57CA1B53B347009895D8 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269E57C91B53B347009895D8 /* EventKit.framework */; };
 		269E57CF1B53B386009895D8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269E57CD1B53B386009895D8 /* HomeViewController.m */; };
 		269E57D01B53B386009895D8 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269E57CE1B53B386009895D8 /* HomeViewController.xib */; };
-		26CB74011B5BA15A0011FFBE /* datenote.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 26CB74001B5BA15A0011FFBE /* datenote.sqlite */; };
-		26CB74041B5BA1B20011FFBE /* myEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CB74031B5BA1B20011FFBE /* myEvent.m */; };
 		7C08A9EAD6F197971610F834 /* libPods-DateNote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 816D42E15CCD84D5BCE37842 /* libPods-DateNote.a */; };
-		EFA687A71B56529C002B0AEC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA687A61B56529C002B0AEC /* libsqlite3.0.dylib */; };
-		EFA687AD1B565340002B0AEC /* SqlClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA687AA1B565340002B0AEC /* SqlClient.m */; };
-		EFA687AE1B565340002B0AEC /* SqlData.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA687AC1B565340002B0AEC /* SqlData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +47,12 @@
 		1044D6751B53FEDB0074BAE1 /* DaliyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaliyViewController.m; sourceTree = "<group>"; };
 		1044D6771B53FF520074BAE1 /* DaliyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaliyCell.h; sourceTree = "<group>"; };
 		1044D6781B53FF520074BAE1 /* DaliyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaliyCell.m; sourceTree = "<group>"; };
+		10F278031B5BFAFB007EC733 /* TemplateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateViewController.h; sourceTree = "<group>"; };
+		10F278041B5BFAFB007EC733 /* TemplateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateViewController.m; sourceTree = "<group>"; };
+		10F278061B5BFC3D007EC733 /* TemplateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateCell.h; sourceTree = "<group>"; };
+		10F278071B5BFC3D007EC733 /* TemplateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TemplateCell.m; sourceTree = "<group>"; };
+		10F278091B5C07DF007EC733 /* CustomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		10F2780A1B5C07DF007EC733 /* CustomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		17340886D3AABEC62CABBFF4 /* Pods-DateNote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateNote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DateNote/Pods-DateNote.debug.xcconfig"; sourceTree = "<group>"; };
 		269E578A1B53B085009895D8 /* DateNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DateNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		269E578E1B53B085009895D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,16 +84,8 @@
 		269E57CC1B53B386009895D8 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		269E57CD1B53B386009895D8 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		269E57CE1B53B386009895D8 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		26CB74001B5BA15A0011FFBE /* datenote.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = datenote.sqlite; sourceTree = SOURCE_ROOT; };
-		26CB74021B5BA1B20011FFBE /* myEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myEvent.h; sourceTree = "<group>"; };
-		26CB74031B5BA1B20011FFBE /* myEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myEvent.m; sourceTree = "<group>"; };
 		816D42E15CCD84D5BCE37842 /* libPods-DateNote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DateNote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FCD7777FF8A703F770E36D /* Pods-DateNote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DateNote.release.xcconfig"; path = "Pods/Target Support Files/Pods-DateNote/Pods-DateNote.release.xcconfig"; sourceTree = "<group>"; };
-		EFA687A61B56529C002B0AEC /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		EFA687A91B565340002B0AEC /* SqlClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlClient.h; sourceTree = "<group>"; };
-		EFA687AA1B565340002B0AEC /* SqlClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlClient.m; sourceTree = "<group>"; };
-		EFA687AB1B565340002B0AEC /* SqlData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlData.h; sourceTree = "<group>"; };
-		EFA687AC1B565340002B0AEC /* SqlData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFA687A71B56529C002B0AEC /* libsqlite3.0.dylib in Frameworks */,
 				269E57CA1B53B347009895D8 /* EventKit.framework in Frameworks */,
 				7C08A9EAD6F197971610F834 /* libPods-DateNote.a in Frameworks */,
 			);
@@ -116,7 +111,6 @@
 		1CF49009DEE5B80B1E8A3734 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EFA687A61B56529C002B0AEC /* libsqlite3.0.dylib */,
 				816D42E15CCD84D5BCE37842 /* libPods-DateNote.a */,
 			);
 			name = Frameworks;
@@ -146,9 +140,6 @@
 		269E578C1B53B085009895D8 /* DateNote */ = {
 			isa = PBXGroup;
 			children = (
-				26CB74051B5BCEE00011FFBE /* Resources */,
-				26CB73FF1B5BA1380011FFBE /* model */,
-				EFA687A81B565331002B0AEC /* SQLite */,
 				269E57CB1B53B36D009895D8 /* Home */,
 				269E57B61B53B2BB009895D8 /* KDCalendar */,
 				269E57911B53B085009895D8 /* AppDelegate.h */,
@@ -159,6 +150,12 @@
 				1044D6751B53FEDB0074BAE1 /* DaliyViewController.m */,
 				1044D6771B53FF520074BAE1 /* DaliyCell.h */,
 				1044D6781B53FF520074BAE1 /* DaliyCell.m */,
+				10F278031B5BFAFB007EC733 /* TemplateViewController.h */,
+				10F278041B5BFAFB007EC733 /* TemplateViewController.m */,
+				10F278061B5BFC3D007EC733 /* TemplateCell.h */,
+				10F278071B5BFC3D007EC733 /* TemplateCell.m */,
+				10F278091B5C07DF007EC733 /* CustomViewController.h */,
+				10F2780A1B5C07DF007EC733 /* CustomViewController.m */,
 				269E579A1B53B085009895D8 /* Main.storyboard */,
 				269E579D1B53B085009895D8 /* Images.xcassets */,
 				269E579F1B53B085009895D8 /* LaunchScreen.xib */,
@@ -223,23 +220,6 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
-		26CB73FF1B5BA1380011FFBE /* model */ = {
-			isa = PBXGroup;
-			children = (
-				26CB74021B5BA1B20011FFBE /* myEvent.h */,
-				26CB74031B5BA1B20011FFBE /* myEvent.m */,
-			);
-			name = model;
-			sourceTree = "<group>";
-		};
-		26CB74051B5BCEE00011FFBE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				26CB74001B5BA15A0011FFBE /* datenote.sqlite */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		78DECB3AC8861B3442D84E3C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,17 +227,6 @@
 				C5FCD7777FF8A703F770E36D /* Pods-DateNote.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		EFA687A81B565331002B0AEC /* SQLite */ = {
-			isa = PBXGroup;
-			children = (
-				EFA687A91B565340002B0AEC /* SqlClient.h */,
-				EFA687AA1B565340002B0AEC /* SqlClient.m */,
-				EFA687AB1B565340002B0AEC /* SqlData.h */,
-				EFA687AC1B565340002B0AEC /* SqlData.m */,
-			);
-			name = SQLite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,7 +314,6 @@
 				269E579C1B53B085009895D8 /* Main.storyboard in Resources */,
 				269E57A11B53B085009895D8 /* LaunchScreen.xib in Resources */,
 				269E579E1B53B085009895D8 /* Images.xcassets in Resources */,
-				26CB74011B5BA15A0011FFBE /* datenote.sqlite in Resources */,
 				269E57D01B53B386009895D8 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,14 +370,14 @@
 				269E57991B53B085009895D8 /* ViewController.m in Sources */,
 				1044D6791B53FF520074BAE1 /* DaliyCell.m in Sources */,
 				269E57C51B53B2E7009895D8 /* KDCalendarView.m in Sources */,
-				EFA687AD1B565340002B0AEC /* SqlClient.m in Sources */,
+				10F278081B5BFC3D007EC733 /* TemplateCell.m in Sources */,
 				269E57C61B53B2E7009895D8 /* KDCalendarViewDayCell.m in Sources */,
+				10F278051B5BFAFB007EC733 /* TemplateViewController.m in Sources */,
 				269E57901B53B085009895D8 /* main.m in Sources */,
 				269E57CF1B53B386009895D8 /* HomeViewController.m in Sources */,
 				269E57C81B53B2E7009895D8 /* KDMonthCollectionViewFlowLayout.m in Sources */,
+				10F2780B1B5C07DF007EC733 /* CustomViewController.m in Sources */,
 				269E57C41B53B2E7009895D8 /* KDCalendarLineReusableView.m in Sources */,
-				EFA687AE1B565340002B0AEC /* SqlData.m in Sources */,
-				26CB74041B5BA1B20011FFBE /* myEvent.m in Sources */,
 				269E57C31B53B2E7009895D8 /* KDCalendarHeaderView.m in Sources */,
 				1044D6761B53FEDB0074BAE1 /* DaliyViewController.m in Sources */,
 				269E57C71B53B2E7009895D8 /* KDCalendarViewMonthCell.m in Sources */,
@@ -540,7 +508,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DateNote/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -552,7 +519,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DateNote/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -96,10 +96,11 @@
     [self.collectionView registerClass:[KDCalendarViewMonthCell class]
             forCellWithReuseIdentifier:NSStringFromClass([KDCalendarViewMonthCell class])];
     
-    
+
     [self addSubview:self.collectionView];
-    // Events
     
+
+    //[self loadEventsInCalendar];
     
 }
 
@@ -113,8 +114,6 @@
 {
     if(self.dataSource)
     {
-        
-        
         _startDateCache = self.dataSource.startDate;
         
         // * Get the start of the first month and set it as the base date
@@ -181,10 +180,12 @@
                          didScrollToMonth:self.dataSource.startDate];
     }
     
+    /*
     if(self.showsEvents)
     {
         [self loadEventsInCalendar];
     }
+    */
     
     _numberOfItemsInSectionCache = [_calendar components:NSCalendarUnitMonth
                                                 fromDate:_startDateCache
@@ -474,8 +475,6 @@
     if(showsEvents && _startDateCache) // if we set to YES and the view has fetched the dates from the delegates
     {
         [self loadEventsInCalendar];
-        
-        
     }
     
     _showsEvents = showsEvents;
@@ -492,18 +491,9 @@
     
     
     void(^FetchEventsBlock)(void) = ^{
-        
-        NSPredicate *predicate = [_store predicateForEventsWithStartDate:_startDateCache
-                                                                 endDate:_endDateCache
-                                                               calendars:nil];
-        
-        NSArray* eventsArray = [_store eventsMatchingPredicate:predicate];
-        
-        
         // Process Events
         
         NSInteger numberOfItems = [self collectionView:self.collectionView numberOfItemsInSection:0];
-        
         NSMutableArray* eventsByMonth = [NSMutableArray arrayWithCapacity:numberOfItems];
         
         for (int i = 0; i < numberOfItems; i++)
@@ -528,56 +518,16 @@
         [eventsContainer addObject:@"345"];
         [eventsContainer addObject:@"345"];
         
-        
-        /*
-        for (EKEvent* event in eventsArray)
-        {
-          
-            NSDateComponents *components = [_calendar components:NSCalendarUnitMonth | NSCalendarUnitDay fromDate:_startDateCache toDate:event.startDate options:0];
-            
-            NSMutableArray* monthMutableArray = (NSMutableArray*)eventsByMonth[components.month];
-            
-            NSMutableArray* eventsContainer = (NSMutableArray*)monthMutableArray[components.day];
-            
-            [eventsContainer addObject:event];
-        }
-        */
-
-        
-        
         self.events = [NSArray arrayWithArray:eventsByMonth];
         
         __weak KDCalendarView* wself = self;
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
             [wself.collectionView reloadData];
-            
         });
     };
     
     dispatch_async(dispatch_get_global_queue(0, 0), FetchEventsBlock);
-    
-    /*
-    if([EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent] != EKAuthorizationStatusAuthorized)
-    {
-        [_store requestAccessToEntityType:EKEntityTypeEvent
-                               completion:^(BOOL granted, NSError *error) {
-            
-                                   if(granted) {
-                
-                                       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), FetchEventsBlock);
-                
-                                   }
-            
-            
-                               }];
-    }
-    else
-    {
-        dispatch_async(dispatch_get_global_queue(0, 0), FetchEventsBlock);
-    }
-    */
 }
 
 

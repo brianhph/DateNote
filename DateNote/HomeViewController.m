@@ -31,6 +31,7 @@
     
 
     [self.calendar setDateSelected:today];
+    [self.calendar setShowsEvents:YES];
     //[self.calendar dateByAddingComponents:components toDate:components options:0];
 }
 
@@ -48,7 +49,7 @@
     NSDateComponents *offsetDateComponents = [[NSDateComponents alloc] init];
     
     offsetDateComponents.year = 2;
-    offsetDateComponents.month = 3;
+    offsetDateComponents.month = 0;
     
     NSDate *yearLaterDate = [[NSCalendar currentCalendar] dateByAddingComponents:offsetDateComponents toDate:[NSDate date] options:0];
     
@@ -66,6 +67,11 @@
     headerFormatter.dateFormat = @"MMMM, yyyy";
     
     
+}
+
+-(void)calendarController:(KDCalendarView*)calendarViewController didSelectDay:(NSDate*)date
+{
+    NSLog(@"update table view");
 }
 
 

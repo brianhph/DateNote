@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-DateNote-AFNetworking.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-DateNote-SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-DateNote-SVPullToRefresh.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-DateNote.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5E66D8D5C1E5673F2F5EA67A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>753BF5871D44149AB8E1909E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79296770D6E831DF9A6D50B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>98F414E561A173CED7A2AB9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A26F0D26326A1A1568FE9640</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A34F654373A59661EF861C65</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA0BA6371115CDA6D41ED049</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

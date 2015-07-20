@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <sqlite3.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

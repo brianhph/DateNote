@@ -4,6 +4,7 @@
 target 'DateNote' do
   pod 'AFNetworking'
   pod 'SVProgressHUD'
+  pod 'SVPullToRefresh'
 end
 
 target 'DateNoteTests' do

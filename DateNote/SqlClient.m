@@ -19,6 +19,17 @@ NSString * const colorList[] = {
 
 @implementation SqlClient
 
+-(void)insertDetailOneDayEventStartWith:(NSDate *)startTime tilte:(NSString *)title description:(NSString *)description img_url:(NSString *)img_url mt_id:(NSString *)mt_id repeat:(NSString *)repeat{
+    NSString *date = [self getNewDateWith:startTime day:0 month:0 year:0];
+    
+//    NSMutableDictionary *inputDic = [self createMyEventDic:date title:title description:description r_id:nil];
+    
+    NSDictionary *tempDic = @{@"mt_id": mt_id,@"r_id": @"0",@"e_title": title,@"e_time": date,@"e_detail_url": @"detail_url",@"desc": description,@"img_url": img_url};
+    NSMutableDictionary *inputDic = [[NSMutableDictionary alloc] initWithDictionary:tempDic];
+    
+    [SqlData insertMyEvent:inputDic];
+}
+
 -(void)insertOneDayEventStartWith:(NSDate *)startTime tilte:(NSString *)title description:(NSString *)description{
     NSString *date = [self getNewDateWith:startTime day:0 month:0 year:0];
     

@@ -15,6 +15,7 @@
 -(void)resetData;
 -(NSString *)getTemplateColor;
 
+-(void)insertDetailOneDayEventStartWith:(NSDate *)startTime tilte:(NSString *)title description:(NSString *)description img_url:(NSString *)img_url mt_id:(NSString *)mt_id repeat:(NSString *)repeat;
 -(void)insertOneDayEventStartWith:(NSDate *)startTime title:(NSString *)title description:(NSString *)description;
 -(void)insertDayEventStartWith:(NSDate *)startTime title:(NSString *)title description:(NSString *)description r_id:(NSString *)r_id;
 -(void)insertWeekEventStartWith:(NSDate *)startTime title:(NSString *)title description:(NSString *)description r_id:(NSString *)r_id;

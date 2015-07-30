@@ -9,10 +9,12 @@
 #import "CustomViewController.h"
 #import "DetailViewController.h"
 #import "HomeViewController.h"
+#import "SqlClient.h"
 
 @interface CustomViewController ()<UITextFieldDelegate,UIPickerViewDataSource,UIPickerViewDelegate>{
     NSArray* _titleSelectionData;
     NSInteger *pickerRow;
+    NSInteger *mt_id;
 }
 
 @property (weak, nonatomic) IBOutlet UINavigationItem *nav;
@@ -133,6 +135,9 @@
 
 -(void)ShowTemplateSelectedDate{
     self.e_template.text = [NSString stringWithFormat:@"%@", [plurk objectAtIndex:pickerRow]];
+    NSLog(@"template row = %lo",(long)pickerRow);
+    mt_id = (long)pickerRow + 1;
+    NSLog(@"mtid=%lo",(long)mt_id);
     [self.e_template resignFirstResponder];
 }
 
@@ -196,6 +201,23 @@
     //    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
     //    [self presentViewController:nvc animated:NO completion:nil];
     
+    
+    NSString *dateString = [NSString stringWithFormat:@"%@ %@:00", self.startDate.text,self.startTime.text];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
+    
+    NSDate *e_time = [dateFormatter dateFromString:dateString];
+    NSLog(@"title=%@",self.e_title.text);
+    NSLog(@"desc=%@",self.e_desc.text);
+    NSLog(@"img_url=%@",self.img_url.text);
+    NSString *mt_id_str = [NSString stringWithFormat: @"%ld", (long)mt_id];
+    NSLog(@"mt_id=%@",mt_id_str);
+    NSLog(@"date=%@",dateString);
+    
+    SqlClient *client = [[SqlClient alloc] init];
+    [client insertDetailOneDayEventStartWith:e_time tilte:self.e_title.text description:self.e_desc.text img_url:self.img_url.text mt_id:mt_id_str repeat:@"0"];
+    
     [self presentViewFromRight];
     HomeViewController *vc =  [self.storyboard instantiateViewControllerWithIdentifier:@"HomeVC"];  //記得要用storyboard id 傳過去
     //    vc.template = self.template;
@@ -215,7 +237,7 @@
 
 -(void)ShowStartSelectedDate{
     NSDateFormatter *formatter=[[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"YYYY/MM/dd"];
+    [formatter setDateFormat:@"YYYY-MM-dd"];
     self.startDate.text = [NSString stringWithFormat:@"%@",[formatter stringFromDate:dataPicker.date]];
     [self.startDate resignFirstResponder];
 }
